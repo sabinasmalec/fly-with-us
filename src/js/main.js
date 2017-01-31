@@ -1,3 +1,46 @@
+class Slide {
+  constructor(slideId, slideAuthorName, slideAuthorImg, slideAuthorQuote) {
+    this.slideId = slideId;
+    this.slideAuthorName = slideAuthorName;
+    this.slideAuthorImg = slideAuthorImg;
+    this.slideAuthorQuote = slideAuthorQuote;
+  }
+}
+
+const slideApp = new Vue({ 
+	el: '#slideApp',
+  	data: {
+	    slideList: [
+	    	new Slide(
+	    		'1',
+	    		'Johe Doe',
+	    		'img/avatar1.jpeg',
+	    		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora cum commodi nobis voluptatum. Excepturi fugiat, aperiam ipsam incidunt'
+	    		),
+	    	new Slide(
+	    		'2',
+	    		'John Doe',
+	    		'img/avatar2.jpg',
+	    		'Excepturi fugiat, aperiam ipsam incidunt quia rerum voluptatum provident ex optio necessitatibus, earum sunt, obcaecati velit fuga.'
+	    		),
+	    	new Slide(
+	    		'3',
+	    		'John Doe',
+	    		'img/avatar3.jpeg',
+	    		'Tempore veniam rerum dicta, at repellendus expedita placeat quidem! Perspiciatis culpa quidem doloribus, velit dolores voluptatem laborum quas, fugit iste sapiente, distinctio.'
+	    		),
+	    	new Slide(
+	    		'4',
+	    		'Johe Doe',
+	    		'img/avatar4.jpg',
+	    		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora cum commodi nobis voluptatum. Excepturi fugiat, aperiam ipsam incidunt'
+	    		)
+	    ]
+	},
+
+});
+
+
 $( document ).ready(function() {
 	$('#mobile-menu-icon').on('click', function(){
 	    $(this).toggleClass('to-close-menu');
