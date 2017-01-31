@@ -46,7 +46,59 @@ $( document ).ready(function() {
 	  $('.slick-current .slide-description').hide();
 	});
 
+});
 
+class Post {
+  constructor(cityName, cityDescription, cityImg, cityId) {
+    this.cityName = cityName;
+    this.cityDescription = cityDescription;
+    this.cityImg = cityImg;
+    this.cityId = cityId;
+  }
+}
+
+const app = new Vue({ 
+	el: '#app',
+  	data: {
+	    postList: [
+	    	new Post(
+	    		'New York',
+	    		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, corporis, ab. Neque assumenda eaque nisi magni aspernatur minus eius quaerat obcaecati quos accusantium. Tempora cupiditate voluptatem laboriosam qui aliquam est. Debitis itaque reprehenderit libero, eum cupiditate cumque nulla repellendus error voluptatibus aliquid? Aut nam delectus odit accusamus eveniet temporibus earum quae, dolorem, dolorum quas, harum fugiat, doloremque pariatur hic blanditiis. Molestias nemo, quidem et omnis debitis harum est delectus, vero voluptatum totam magni inventore saepe asperiores veniam tempora quis, voluptates sint doloribus quaerat? Maxime distinctio vitae eos obcaecati, iusto facilis!',
+	    		'img/new-york.jpg',
+	    		'new-york-post'
+	    		),
+	    	new Post(
+	    		'Dubai',
+	    		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, corporis, ab. Neque assumenda eaque nisi magni aspernatur minus eius quaerat obcaecati quos accusantium. Tempora cupiditate voluptatem laboriosam qui aliquam est. Debitis itaque reprehenderit libero, eum cupiditate cumque nulla repellendus error voluptatibus aliquid? Aut nam delectus odit accusamus eveniet temporibus earum quae, dolorem, dolorum quas, harum fugiat, doloremque pariatur hic blanditiis. Molestias nemo, quidem et omnis debitis harum est delectus, vero voluptatum totam magni inventore saepe asperiores veniam tempora quis, voluptates sint doloribus quaerat? Maxime distinctio vitae eos obcaecati, iusto facilis!',
+	    		'img/dubai.jpg',
+	    		'dubai-post'
+	    		),
+	    	new Post(
+	    		'Paris',
+	    		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, corporis, ab. Neque assumenda eaque nisi magni aspernatur minus eius quaerat obcaecati quos accusantium. Tempora cupiditate voluptatem laboriosam qui aliquam est. Debitis itaque reprehenderit libero, eum cupiditate cumque nulla repellendus error voluptatibus aliquid? Aut nam delectus odit accusamus eveniet temporibus earum quae, dolorem, dolorum quas, harum fugiat, doloremque pariatur hic blanditiis. Molestias nemo, quidem et omnis debitis harum est delectus, vero voluptatum totam magni inventore saepe asperiores veniam tempora quis, voluptates sint doloribus quaerat? Maxime distinctio vitae eos obcaecati, iusto facilis!',
+	    		'img/paris.jpg',
+	    		'paris-post'
+	    		),
+	    	new Post(
+	    		'London',
+	    		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, corporis, ab. Neque assumenda eaque nisi magni aspernatur minus eius quaerat obcaecati quos accusantium. Tempora cupiditate voluptatem laboriosam qui aliquam est. Debitis itaque reprehenderit libero, eum cupiditate cumque nulla repellendus error voluptatibus aliquid? Aut nam delectus odit accusamus eveniet temporibus earum quae, dolorem, dolorum quas, harum fugiat, doloremque pariatur hic blanditiis. Molestias nemo, quidem et omnis debitis harum est delectus, vero voluptatum totam magni inventore saepe asperiores veniam tempora quis, voluptates sint doloribus quaerat? Maxime distinctio vitae eos obcaecati, iusto facilis!',
+	    		'img/london.jpeg',
+	    		'london-post'
+	    		),
+	    	new Post(
+	    		'Amsterdam',
+	    		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, corporis, ab. Neque assumenda eaque nisi magni aspernatur minus eius quaerat obcaecati quos accusantium. Tempora cupiditate voluptatem laboriosam qui aliquam est. Debitis itaque reprehenderit libero, eum cupiditate cumque nulla repellendus error voluptatibus aliquid? Aut nam delectus odit accusamus eveniet temporibus earum quae, dolorem, dolorum quas, harum fugiat, doloremque pariatur hic blanditiis. Molestias nemo, quidem et omnis debitis harum est delectus, vero voluptatum totam magni inventore saepe asperiores veniam tempora quis, voluptates sint doloribus quaerat? Maxime distinctio vitae eos obcaecati, iusto facilis!',
+	    		'img/amsterdam.jpg',
+	    		'amsterdam-post'
+	    		),
+	    	new Post(
+	    		'Rio de Janeiro',
+	    		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, corporis, ab. Neque assumenda eaque nisi magni aspernatur minus eius quaerat obcaecati quos accusantium. Tempora cupiditate voluptatem laboriosam qui aliquam est. Debitis itaque reprehenderit libero, eum cupiditate cumque nulla repellendus error voluptatibus aliquid? Aut nam delectus odit accusamus eveniet temporibus earum quae, dolorem, dolorum quas, harum fugiat, doloremque pariatur hic blanditiis. Molestias nemo, quidem et omnis debitis harum est delectus, vero voluptatum totam magni inventore saepe asperiores veniam tempora quis, voluptates sint doloribus quaerat? Maxime distinctio vitae eos obcaecati, iusto facilis!',
+	    		'img/rio.jpeg',
+	    		'rio-post'
+	    		)
+	    ]
+	},
 
 });
 

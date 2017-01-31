@@ -16,7 +16,7 @@
                     <img src="img/logo.png" alt="Fly with us!">
                 </a>
                 <button class="mobile-menu-icon" id="mobile-menu-icon"></button>
-                <input class="search-input" type="text" placeholder="&#xf002;" />
+                <input class="search-input" type="text" placeholder="&#xf002" />
             </div>
             <div>
                 <ul class="nav-list">
@@ -57,128 +57,30 @@
             <h2>Popular destinations</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora cum commodi nobis voluptatum. Excepturi fugiat, aperiam ipsam incidunt quia rerum voluptatum provident ex optio necessitatibus, earum sunt, obcaecati velit fuga.</p>
         </header>
-        <div class="gallery-container">
-            <div class="gallery">
-                <a href="#new-york-post">
-                    <div class="photo-box">
-                        <div class="photo-element photo-decoration img-decoration-1"></div>
-                        <div class="photo-element photo-decoration img-decoration-2"></div>
-                        <div class="photo-element gallery-img bg-img1"></div>
-                    </div>
-                    <h3>New York</h3>
-                </a>
-            </div> 
-            <div id="new-york-post" class="city-post">
-                <div class="city-post-content">
-                    <div>
-                        <h3>New York</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, corporis, ab. Neque assumenda eaque nisi magni aspernatur minus eius quaerat obcaecati quos accusantium. Tempora cupiditate voluptatem laboriosam qui aliquam est. Debitis itaque reprehenderit libero, eum cupiditate cumque nulla repellendus error voluptatibus aliquid? Aut nam delectus odit accusamus eveniet temporibus earum quae, dolorem, dolorum quas, harum fugiat, doloremque pariatur hic blanditiis. Molestias nemo, quidem et omnis debitis harum est delectus, vero voluptatum totam magni inventore saepe asperiores veniam tempora quis, voluptates sint doloribus quaerat? Maxime distinctio vitae eos obcaecati, iusto facilis!</p>
-                    </div>
-                    <img src="img/new-york.jpg">
-                    <a href="#close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
+        <div id="app" class="gallery-container">
+            <div v-for="post in postList">
+                <div class="gallery">
+                    <a v-bind:href="'#' + post.cityId">
+                        <div class="photo-box">
+                            <div class="photo-element photo-decoration img-decoration-1"></div>
+                            <div class="photo-element photo-decoration img-decoration-2"></div>
+                            <div class="photo-element gallery-img" v-bind:class="'bg-img-' + post.cityId"></div>
+                        </div>
+                        <h3>{{ post.cityName }}</h3>
+                    </a>
                 </div>
-            </div>    
-            <div class="gallery">
-                <a href="#dubai-post">
-                    <div class="photo-box">
-                        <div class="photo-element photo-decoration img-decoration-1"></div>
-                        <div class="photo-element photo-decoration img-decoration-2"></div>
-                        <div class="photo-element gallery-img bg-img2"></div>
+                <div v-bind:id="post.cityId" class="city-post">
+                    <div class="city-post-content">
+                        <div>
+                            <h3>{{ post.cityName }}</h3>
+                            <p>{{ post.cityDescription }}</p>
+                        </div>
+                        <img v-bind:src= "post.cityImg" alt="">
+                        <a href="#close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
                     </div>
-                    <h3>Dubai</h3>
-                </a>
-            </div> 
-            <div id="dubai-post" class="city-post">
-                <div class="city-post-content">
-                    <div>
-                        <h3>Dubai</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, corporis, ab. Neque assumenda eaque nisi magni aspernatur minus eius quaerat obcaecati quos accusantium. Tempora cupiditate voluptatem laboriosam qui aliquam est. Debitis itaque reprehenderit libero, eum cupiditate cumque nulla repellendus error voluptatibus aliquid? Aut nam delectus odit accusamus eveniet temporibus earum quae, dolorem, dolorum quas, harum fugiat, doloremque pariatur hic blanditiis. Molestias nemo, quidem et omnis debitis harum est delectus, vero voluptatum totam magni inventore saepe asperiores veniam tempora quis, voluptates sint doloribus quaerat? Maxime distinctio vitae eos obcaecati, iusto facilis!</p>
-                    </div>
-                    <img src="img/dubai.jpg">
-                    <a href="#close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
-                </div>
-            </div>    
-            <div class="gallery">
-                <a href="#paris-post">
-                    <div class="photo-box">
-                        <div class="photo-element photo-decoration img-decoration-1"></div>
-                        <div class="photo-element photo-decoration img-decoration-2"></div>
-                        <div class="photo-element gallery-img bg-img3"></div>
-                    </div>
-                    <h3>Paris</h3>
-                </a>
-            </div> 
-            <div id="paris-post" class="city-post">
-                <div class="city-post-content">
-                    <div>
-                        <h3>Paris</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, corporis, ab. Neque assumenda eaque nisi magni aspernatur minus eius quaerat obcaecati quos accusantium. Tempora cupiditate voluptatem laboriosam qui aliquam est. Debitis itaque reprehenderit libero, eum cupiditate cumque nulla repellendus error voluptatibus aliquid? Aut nam delectus odit accusamus eveniet temporibus earum quae, dolorem, dolorum quas, harum fugiat, doloremque pariatur hic blanditiis. Molestias nemo, quidem et omnis debitis harum est delectus, vero voluptatum totam magni inventore saepe asperiores veniam tempora quis, voluptates sint doloribus quaerat? Maxime distinctio vitae eos obcaecati, iusto facilis!</p>
-                    </div>
-                    <img src="img/paris.jpg">
-                    <a href="#close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
-                </div>
-            </div>    
-            <div class="gallery">
-                <a href="#london-post">
-                    <div class="photo-box">
-                        <div class="photo-element photo-decoration img-decoration-1"></div>
-                        <div class="photo-element photo-decoration img-decoration-2"></div>
-                        <div class="photo-element gallery-img bg-img4"></div>
-                    </div>
-                    <h3>London</h3>
-                </a>
-            </div> 
-            <div id="london-post" class="city-post">
-                <div class="city-post-content">
-                    <div>
-                        <h3>London</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, corporis, ab. Neque assumenda eaque nisi magni aspernatur minus eius quaerat obcaecati quos accusantium. Tempora cupiditate voluptatem laboriosam qui aliquam est. Debitis itaque reprehenderit libero, eum cupiditate cumque nulla repellendus error voluptatibus aliquid? Aut nam delectus odit accusamus eveniet temporibus earum quae, dolorem, dolorum quas, harum fugiat, doloremque pariatur hic blanditiis. Molestias nemo, quidem et omnis debitis harum est delectus, vero voluptatum totam magni inventore saepe asperiores veniam tempora quis, voluptates sint doloribus quaerat? Maxime distinctio vitae eos obcaecati, iusto facilis!</p>
-                    </div>
-                    <img src="img/london.jpeg">
-                    <a href="#close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
-                </div>
-            </div>    
-            <div class="gallery">
-                <a href="#amsterdam-post">
-                    <div class="photo-box">
-                        <div class="photo-element photo-decoration img-decoration-1"></div>
-                        <div class="photo-element photo-decoration img-decoration-2"></div>
-                        <div class="photo-element gallery-img bg-img5"></div>
-                    </div>
-                    <h3>Amsterdam</h3>
-                </a>
-            </div> 
-            <div id="amsterdam-post" class="city-post">
-                <div class="city-post-content">
-                    <div>
-                        <h3>Amsterdam</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, corporis, ab. Neque assumenda eaque nisi magni aspernatur minus eius quaerat obcaecati quos accusantium. Tempora cupiditate voluptatem laboriosam qui aliquam est. Debitis itaque reprehenderit libero, eum cupiditate cumque nulla repellendus error voluptatibus aliquid? Aut nam delectus odit accusamus eveniet temporibus earum quae, dolorem, dolorum quas, harum fugiat, doloremque pariatur hic blanditiis. Molestias nemo, quidem et omnis debitis harum est delectus, vero voluptatum totam magni inventore saepe asperiores veniam tempora quis, voluptates sint doloribus quaerat? Maxime distinctio vitae eos obcaecati, iusto facilis!</p>
-                    </div>
-                    <img src="img/amsterdam.jpg">
-                    <a href="#close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
-                </div>
-            </div>    
-            <div class="gallery">
-                <a href="#rio-post">
-                    <div class="photo-box">
-                        <div class="photo-element photo-decoration img-decoration-1"></div>
-                        <div class="photo-element photo-decoration img-decoration-2"></div>
-                        <div class="photo-element gallery-img bg-img6"></div>
-                    </div>
-                    <h3>Rio de Janeiro</h3>
-                </a>
-            </div> 
-            <div id="rio-post" class="city-post">
-                <div class="city-post-content">
-                    <div>
-                        <h3>Rio de Janeiro</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, corporis, ab. Neque assumenda eaque nisi magni aspernatur minus eius quaerat obcaecati quos accusantium. Tempora cupiditate voluptatem laboriosam qui aliquam est. Debitis itaque reprehenderit libero, eum cupiditate cumque nulla repellendus error voluptatibus aliquid? Aut nam delectus odit accusamus eveniet temporibus earum quae, dolorem, dolorum quas, harum fugiat, doloremque pariatur hic blanditiis. Molestias nemo, quidem et omnis debitis harum est delectus, vero voluptatum totam magni inventore saepe asperiores veniam tempora quis, voluptates sint doloribus quaerat? Maxime distinctio vitae eos obcaecati, iusto facilis!</p>
-                    </div>
-                    <img src="img/rio.jpeg">
-                    <a href="#close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
-                </div>
-            </div>          
-        </div>
+                </div>  
+            </div>
+        </div>        
     </section>
     <section class="space">
     </section>
@@ -235,9 +137,10 @@
     </footer>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
