@@ -205,17 +205,17 @@ h2 {
         background-repeat: no-repeat;
         border: 10px solid #ebebeb;
         box-sizing: border-box; }
-      .destinations .gallery .photo-box .bg-img1 {
+      .destinations .gallery .photo-box .bg-img-new-york-post {
         background-image: url(../img/new-york.jpg); }
-      .destinations .gallery .photo-box .bg-img2 {
+      .destinations .gallery .photo-box .bg-img-dubai-post {
         background-image: url(../img/dubai.jpg); }
-      .destinations .gallery .photo-box .bg-img3 {
+      .destinations .gallery .photo-box .bg-img-paris-post {
         background-image: url(../img/paris.jpg); }
-      .destinations .gallery .photo-box .bg-img4 {
+      .destinations .gallery .photo-box .bg-img-london-post {
         background-image: url(../img/london.jpeg); }
-      .destinations .gallery .photo-box .bg-img5 {
+      .destinations .gallery .photo-box .bg-img-amsterdam-post {
         background-image: url(../img/amsterdam.jpg); }
-      .destinations .gallery .photo-box .bg-img6 {
+      .destinations .gallery .photo-box .bg-img-rio-post {
         background-image: url(../img/rio.jpeg); }
       .destinations .gallery .photo-box .img-decoration-1 {
         -ms-transform: rotate(-10deg);
