@@ -75,7 +75,7 @@
                             <h3>{{ post.cityName }}</h3>
                             <p>{{ post.cityDescription }}</p>
                         </div>
-                        <img v-bind:src= "post.cityImg" alt="">
+                        <img v-bind:src= "post.cityImg" alt="">
                         <a href="#close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
                     </div>
                 </div>  
@@ -87,50 +87,26 @@
     <section class="feedback">
         <header>
             <h2>Hear our customers thoughts</h2>
-            <h3 class="line">
+            <p class="line">
                 <span><i class="fa fa-heart fa-2x" aria-hidden="true"></i></span>
-            </h3>
+            </p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora cum commodi nobis voluptatum. Excepturi fugiat, aperiam ipsam incidunt quia rerum voluptatum provident ex optio necessitatibus, earum sunt, obcaecati velit fuga. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore veniam rerum dicta, at repellendus expedita placeat quidem! Perspiciatis culpa quidem doloribus, velit dolores voluptatem laborum quas, fugit iste sapiente, distinctio.</p>
         </header>
-        <div class="slider center">
-            <div class="single-slide slide-bg1">
+        <div id="slideApp" class="slider center">
+            <div v-for="slide in slideList" class="single-slide" v-bind:class="'slide-bg' + slide.slideId">
                 <div class="slide-description">
-                    <img src="img/avatar1.jpeg">
+                    <img v-bind:src= "slide.slideAuthorImg" v-bind:alt="slide.slideAuthorName">
                     <span class="left-quote">“</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora cum commodi nobis voluptatum. Excepturi fugiat, aperiam ipsam incidunt</p>
+                    <p>{{ slide.slideAuthorQuote }}</p>
                     <span class="right-quote">”</span>
                 </div>
-            </div>
-            <div class="single-slide slide-bg2">
-                <div class="slide-description">
-                    <img src="img/avatar2.jpg">
-                    <span class="left-quote">“</span>
-                    <p>Excepturi fugiat, aperiam ipsam incidunt quia rerum voluptatum provident ex optio necessitatibus, earum sunt, obcaecati velit fuga.</p>
-                    <span class="right-quote">”</span>
-                </div>
-            </div>
-            <div class="single-slide slide-bg3">
-                <div class="slide-description">
-                    <img src="img/avatar3.jpeg">
-                    <span class="left-quote">“</span>
-                    <p>Tempore veniam rerum dicta, at repellendus expedita placeat quidem! Perspiciatis culpa quidem doloribus, velit dolores voluptatem laborum quas, fugit iste sapiente, distinctio.</p>
-                    <span class="right-quote">”</span>
-                </div>
-            </div>
-            <div class="single-slide slide-bg4">
-                <div class="slide-description">
-                    <img src="img/avatar4.jpg">
-                    <span class="left-quote">“</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora cum commodi nobis voluptatum. Excepturi fugiat, aperiam ipsam incidunt</p>
-                    <span class="right-quote">”</span>
-                </div>
-            </div>
+            </div>        
         </div>
-        <footer>
+        <div class="feedback-footer">
             <p class="right-quote">”</p>
             <h2>We had the experience of our life.</h2>
-            <button type="button" class="btn">Get started</button>
-        </footer>
+            <button type="button" class="btn">Get started</button>
+        </div>
     </section>
     <footer class="space">
         <img src="img/signature.png" alt="Harris Imran">
@@ -140,7 +116,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

@@ -265,15 +265,15 @@ h2 {
         top: 0;
         right: 0; }
 
-.feedback h3 {
+.feedback .line {
   color: #500e5e;
   text-align: center;
   position: relative; }
-  .feedback h3 span {
+  .feedback .line span {
     background-color: #fff;
     padding: 0 1em;
     line-height: 2em; }
-  .feedback h3:before {
+  .feedback .line:before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -314,10 +314,10 @@ h2 {
       position: absolute;
       font-size: 50px; }
     .feedback .slider .single-slide .slide-description .left-quote {
-      top: 15%;
+      top: 5%;
       left: 5%; }
     .feedback .slider .single-slide .slide-description .right-quote {
-      bottom: 15%;
+      bottom: 0;
       right: 5%; }
 
 .feedback .slider .slick-current {
@@ -335,17 +335,17 @@ h2 {
 .feedback .slider .slide-bg4 {
   background-image: url(../img/slide_bg4.jpg); }
 
-.feedback footer .right-quote {
+.feedback .feedback-footer .right-quote {
   font-size: 70px;
   text-align: center;
   color: #500e5e;
   margin-bottom: 0; }
 
-.feedback footer h2 {
+.feedback .feedback-footer h2 {
   color: #9f9d9e;
   margin-top: 0; }
 
-.feedback footer button {
+.feedback .feedback-footer button {
   display: block;
   margin: 50px auto;
   width: 200px;
@@ -356,7 +356,7 @@ h2 {
   border: 2px solid #500e5e;
   text-transform: uppercase;
   font-weight: bold; }
-  .feedback footer button:hover {
+  .feedback .feedback-footer button:hover {
     background-color: #500e5e;
     color: #fff; }
 
